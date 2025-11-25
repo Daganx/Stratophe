@@ -1,0 +1,104 @@
+/* Conteneur principal */
+.accompagnement-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.accompagnement-section h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+/* Conteneur des cartes pour l'alignement côte à côte */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur les petits écrans */
+  gap: 20px; /* Espace entre les cartes */
+  justify-content: center; /* Centre les cartes horizontalement */
+  margin-top: 30px;
+}
+
+/* Style d'une seule carte */
+.card {
+  flex: 1 1 300px; /* Flexible pour prendre 1/3 de l'espace, mais ne descend pas en dessous de 300px */
+  max-width: 500px;
+  background-color: #ffffff; /* Fond blanc ou clair pour la carte */
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex; /* Utilisation de flex pour structurer le contenu */
+  flex-direction: column;
+}
+
+/* Titres */
+.card-title {
+  font-size: 1.5em;
+  color: #333; /* Couleur sombre pour le titre */
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Contenu de la carte */
+.card-content {
+  flex-grow: 1; /* Permet au contenu de prendre l'espace restant pour uniformiser la hauteur des cartes */
+  margin-bottom: 20px;
+}
+
+.card-content .intro {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.card-content ul {
+  list-style-type: "• "; /* Utilisation d'un point au lieu de la puce par défaut */
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.card-content .result {
+  font-weight: bold;
+  color: #2e7f13; /* Couleur d'accentuation pour le résultat */
+}
+
+/* Footer (Durée et Prix) */
+.card-footer {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+}
+
+.card-footer p {
+  margin: 0;
+}
+
+/* Note spéciale (pour Thème Enfant) */
+.special-note {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.special-note ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+/* Media Query pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Les cartes prennent toute la largeur sur mobile */
+  }
+}

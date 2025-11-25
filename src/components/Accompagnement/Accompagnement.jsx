@@ -1,0 +1,121 @@
+import React from "react";
+import "./accompagnement.css"; // N'oubliez pas d'importer le fichier CSS
+
+const Card = ({ title, subtitle, content, duration, price, specialNote }) => (
+  <div className="card">
+    <h3 className="card-title">{title}</h3>
+    <p className="card-subtitle">{subtitle}</p>
+    <div className="card-content">
+      <p className="intro">💡 {content.intro}</p>
+      <ul>
+        {content.details.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+      <p className="result">👉 Résultat ? {content.result}</p>
+    </div>
+
+    <div className="card-footer">
+      <p className="duration">Durée : {duration}</p>
+      <p className="price">Prix : {price}</p>
+    </div>
+
+    {specialNote && <p className="special-note">{specialNote}</p>}
+  </div>
+);
+
+const AccompagnementSection = () => {
+  const themes = [
+    {
+      title: "THEME ADULTE",
+      subtitle: "(A PARTIR DE 25 ANS)",
+      content: {
+        intro:
+          "Une exploration en profondeur pour mieux se connaître et activer son plein potentiel. Le thème adulte est une consultation unique, un véritable soin de l’âme qui vous offre un éclairage précieux sur qui vous êtes et ce que vous portez en vous. Pendant 2 heures, nous explorerons votre arbre personnel sous toutes ses dimensions :",
+        details: [
+          "- vos besoins profonds,",
+          "- vos forces et talents naturels,",
+          "- vos zones de tension et les blocages à dépasser,",
+          "- votre plan de vie unique et les cycles d’influences qui vous entourent.",
+        ],
+        result:
+          "Vous gagnez en clarté, en fluidité, en compréhension de vous-même. Vous repartez avec une confiance renforcée, des outils et des repères solides pour prendre des décisions alignées avec votre nature profonde.",
+      },
+      duration: "2h",
+      price: "120€ TTC",
+      specialNote: null,
+    },
+    {
+      title: "THEME ENFANT / ADO / JEUNE ADULTE",
+      subtitle: "(-25 ANS)",
+      content: {
+        intro:
+          "Comprendre ses talents, ses besoins et son fonctionnement pour mieux l’accompagner dans son évolution. Cette consultation permet d’offrir à l’enfant ou au jeune adulte une meilleure compréhension de lui-même et donne aux parents des clés concrètes pour l’accompagner avec justesse. Pendant 1h30, nous explorerons :",
+        details: [
+          "- ses dons et talents naturels,",
+          "- ses besoins essentiels,",
+          "- son mode de fonctionnement,",
+          "- ses ressorts de motivation,",
+          "- les cycles qui jalonnent son développement (présent et futur).",
+        ],
+        result:
+          "Vous développez une compréhension plus juste de votre enfant et de votre rôle de parent, vous soutenez son développement et encouragez son épanouissement en respectant son rythme et sa nature profonde.",
+      },
+      duration: "1h30",
+      price: "80€ TTC",
+      specialNote: (
+        <>
+          **Modalités particulières :**
+          <ul>
+            <li>
+              - Pour les mineurs, la restitution du thème se fait uniquement
+              auprès du ou des parent(s).
+            </li>
+            <li>
+              - A partir de 16 ans : présence possible de l’adolescent sous
+              conditions (à discuter en amont de la consultation).
+            </li>
+            <li>
+              - Pour les jeunes adultes (18-25 ans) : restitution du thème avec
+              ou sans parent, selon son choix ou uniquement au(x) parent(s) avec
+              son accord.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "THEME COUPLE / ASSOCIES",
+      subtitle: "",
+      content: {
+        intro:
+          "Mieux comprendre vos fonctionnements respectifs pour une relation harmonieuse, durable et équilibrée. Cette séance en duo permet de décoder le fonctionnement de chacun et la manière dont vos dynamiques se rencontrent, se complètent ou parfois s’opposent au fil du temps. Ensemble nous identifierons :",
+        details: [
+          "- vos besoins fondamentaux,",
+          "- vos zones de friction,",
+          "- vos complémentarités,",
+          "- les cycles qui influencent votre relation,",
+          "- les ajustements qui permettent de retrouver de l’équilibre.",
+        ],
+        result:
+          "Vous repartez avec une meilleure compréhension mutuelle, des clés concrètes pour fluidifier la relation et renforcer le respect des besoins de chacun pour nourrir et poser ainsi les bases d’un équilibre durable.",
+      },
+      duration: "2h30",
+      price: "150€ TTC",
+      specialNote: null,
+    },
+  ];
+
+  return (
+    <section className="accompagnement-section">
+      <h2>DES CONSULTATIONS PENSEES POUR CHACUN :</h2>
+      <div className="card-container">
+        {themes.map((theme, index) => (
+          <Card key={index} {...theme} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default AccompagnementSection;
