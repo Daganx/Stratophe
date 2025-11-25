@@ -1,0 +1,26 @@
+#navigation {
+  display: flex;
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 0 32px;
+  z-index: 2;
+}
+
+#navigation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  padding: 12px 32px;
+  margin: 0;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+}

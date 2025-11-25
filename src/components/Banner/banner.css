@@ -1,0 +1,87 @@
+#banner {
+  width: 100%;
+  min-height: 100vh;
+  padding: 64px 32px 48px;
+  background-image: url("../../assets/images/banner/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.6));
+  z-index: 0;
+}
+
+.banner-info {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-text {
+  text-align: center;
+  color: white;
+}
+
+.banner-text h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.75rem, 9vw, 10rem);
+  letter-spacing: 0.4rem;
+}
+
+.banner-text h2 {
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  #banner {
+    padding: 56px 24px 40px;
+  }
+
+  .banner-text h1 {
+    letter-spacing: 0.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #banner {
+    min-height: 75vh;
+    padding: 48px 20px 32px;
+  }
+
+  .banner-info {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #banner {
+    min-height: 65vh;
+    padding: 40px 16px 24px;
+  }
+
+  .banner-text h1 {
+    letter-spacing: 0.15rem;
+  }
+
+  .banner-text h2 {
+    font-size: 1rem;
+  }
+}
