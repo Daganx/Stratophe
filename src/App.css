@@ -27,3 +27,7 @@
   box-sizing: border-box;
   font-family: "Glonto";
 }
+
+.bold {
+  font-weight: bold;
+}

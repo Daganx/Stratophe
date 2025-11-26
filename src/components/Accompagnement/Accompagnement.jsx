@@ -1,7 +1,16 @@
 import React from "react";
-import "./accompagnement.css"; // N'oubliez pas d'importer le fichier CSS
+import "./accompagnement.css";
 
-const Card = ({ title, subtitle, content, duration, price, specialNote }) => (
+// Composant enfant pour afficher chaque carte
+const Card = ({
+  title,
+  subtitle,
+  content,
+  duration,
+  price,
+  calendlyLink,
+  specialNote,
+}) => (
   <div className="card">
     <h3 className="card-title">{title}</h3>
     <p className="card-subtitle">{subtitle}</p>
@@ -20,15 +29,26 @@ const Card = ({ title, subtitle, content, duration, price, specialNote }) => (
       <p className="price">Prix : {price}</p>
     </div>
 
-    {specialNote && <p className="special-note">{specialNote}</p>}
+    {specialNote && <div className="special-note">{specialNote}</div>}
+
+    {/* Bouton de réservation Calendly */}
+    <a
+      href={calendlyLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="booking-button"
+    >
+      Réserver votre séance 📅
+    </a>
   </div>
 );
 
-const AccompagnementSection = () => {
+// Composant principal utilisant export default function
+export default function AccompagnementSection() {
   const themes = [
     {
       title: "THEME ADULTE",
-      subtitle: "(A PARTIR DE 25 ANS)",
+      subtitle: "(À PARTIR DE 25 ANS)",
       content: {
         intro:
           "Une exploration en profondeur pour mieux se connaître et activer son plein potentiel. Le thème adulte est une consultation unique, un véritable soin de l’âme qui vous offre un éclairage précieux sur qui vous êtes et ce que vous portez en vous. Pendant 2 heures, nous explorerons votre arbre personnel sous toutes ses dimensions :",
@@ -43,10 +63,12 @@ const AccompagnementSection = () => {
       },
       duration: "2h",
       price: "120€ TTC",
+      // LIEN CALENDLY SPÉCIFIQUE ADULTE
+      calendlyLink: "https://calendly.com/votre-nom/theme-adulte",
       specialNote: null,
     },
     {
-      title: "THEME ENFANT / ADO / JEUNE ADULTE",
+      title: "THÈME ENFANT / ADO / JEUNE ADULTE",
       subtitle: "(-25 ANS)",
       content: {
         intro:
@@ -63,6 +85,8 @@ const AccompagnementSection = () => {
       },
       duration: "1h30",
       price: "80€ TTC",
+      // LIEN CALENDLY SPÉCIFIQUE ENFANT
+      calendlyLink: "https://calendly.com/votre-nom/theme-enfant-ado",
       specialNote: (
         <>
           **Modalités particulières :**
@@ -72,7 +96,7 @@ const AccompagnementSection = () => {
               auprès du ou des parent(s).
             </li>
             <li>
-              - A partir de 16 ans : présence possible de l’adolescent sous
+              - À partir de 16 ans : présence possible de l’adolescent sous
               conditions (à discuter en amont de la consultation).
             </li>
             <li>
@@ -85,7 +109,7 @@ const AccompagnementSection = () => {
       ),
     },
     {
-      title: "THEME COUPLE / ASSOCIES",
+      title: "THÈME COUPLE / ASSOCIÉS",
       subtitle: "",
       content: {
         intro:
@@ -102,13 +126,35 @@ const AccompagnementSection = () => {
       },
       duration: "2h30",
       price: "150€ TTC",
+      // LIEN CALENDLY SPÉCIFIQUE COUPLE
+      calendlyLink: "https://calendly.com/votre-nom/theme-couple",
+      specialNote: null,
+    },
+    {
+      title: "SUIVI ANNUEL",
+      content: {
+        intro:
+          "Ce suivi est réservé aux personnes ayant déjà réalisé un thème complet en Numérologie Stratégique®. Nous revenons sur vos fondamentaux numérologiques avec un focus sur votre plan de vie pour explorer :",
+        details: [
+          "- les énergies des 12 prochains mois,",
+          "- les périodes clés,",
+          "- les défis et opportunités,",
+          "- les ajustements à envisager pour rester aligné tout au long de l’année.",
+        ],
+        result:
+          "Vous gagnez en visibilité, en fluidité et en efficacité dans vos choix, vous avancez avec confiance et sérénité tout au long de l’année.",
+      },
+      duration: "1h30",
+      price: "100€ TTC",
+      // LIEN CALENDLY SPÉCIFIQUE ADULTE
+      calendlyLink: "https://calendly.com/votre-nom/theme-suivi",
       specialNote: null,
     },
   ];
 
   return (
-    <section className="accompagnement-section">
-      <h2>DES CONSULTATIONS PENSEES POUR CHACUN :</h2>
+    <section className="accompagnement-section" id="accompagnement">
+      <h2>DES CONSULTATIONS PENSÉES POUR CHACUN :</h2>
       <div className="card-container">
         {themes.map((theme, index) => (
           <Card key={index} {...theme} />
@@ -116,6 +162,4 @@ const AccompagnementSection = () => {
       </div>
     </section>
   );
-};
-
-export default AccompagnementSection;
+}

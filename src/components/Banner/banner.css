@@ -1,6 +1,6 @@
 #banner {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 64px 32px 48px;
   background-image: url("../../assets/images/banner/banner.jpg");
   background-position: center;
@@ -48,6 +48,21 @@
   margin: 0;
   font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.banner-text h3 {
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+.banner-text a {
+  border: 2px solid white;
+  padding: 16px;
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  cursor: pointer;
+  border-radius: 12px;
 }
 
 @media (max-width: 1024px) {

@@ -28,7 +28,7 @@
 
 .approche-text h2 {
   margin: 0 0 0.75em;
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: clamp(1.7rem, 4vw, 3rem);
   line-height: 1.2;
   letter-spacing: 0.08em;
   text-transform: uppercase;

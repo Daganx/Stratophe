@@ -1,0 +1,102 @@
+.about-section {
+  padding: 80px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.about-title {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  color: black;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.about-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-photo-block {
+  flex: 0 0 300px;
+  text-align: center;
+  order: 1;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.photo-caption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.about-text-block {
+  flex: 1;
+  min-width: 300px;
+  order: 2;
+  text-align: justify;
+}
+
+.about-text-block p {
+  margin-bottom: 1.2em;
+  line-height: 1.7;
+  color: black;
+  font-size: 1.05em;
+}
+
+.about-text-block .cta-paragraph {
+  font-weight: 600;
+  color: #333;
+}
+
+.about-text-block .final-cta {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.about-text-block .cta-link {
+  color: #577372;
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.about-text-block .cta-link:hover {
+  text-decoration: underline;
+  color: #577372d0;
+}
+
+@media (max-width: 768px) {
+  .about-content-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-photo-block {
+    flex: 0 0 auto;
+    max-width: 300px;
+    width: 80%;
+    margin: 0 auto;
+    order: 1;
+  }
+
+  .about-text-block {
+    order: 2;
+    text-align: left;
+  }
+}

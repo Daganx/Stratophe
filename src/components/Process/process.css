@@ -1,0 +1,103 @@
+.deroulement-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.deroulement-title {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.deroulement-intro {
+  font-size: 1.1em;
+  text-align: center;
+  color: black;
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+
+.deroulement-steps {
+  list-style: none;
+  padding: 0;
+}
+
+.step-item {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.step-number {
+  background-color: #577372;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.step-title {
+  font-size: 1.4em;
+  color: black;
+  margin: 0;
+  font-weight: 600;
+}
+
+.step-details {
+  color: #666;
+  line-height: 1.6;
+  padding-left: 45px;
+}
+
+.visio-requirements {
+  font-style: italic;
+  margin-top: 10px;
+  padding-left: 0;
+  color: #888;
+}
+
+.visio-image-container {
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.visio-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .deroulement-section {
+    padding: 40px 15px;
+  }
+  .step-title {
+    font-size: 1.2em;
+  }
+  .step-details {
+    padding-left: 10px;
+  }
+}
