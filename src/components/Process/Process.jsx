@@ -9,9 +9,9 @@ export default function Process() {
         <>
           Choisissez votre thème et votre créneau via l’outil de réservation en
           ligne (consultations possibles en soirée et week-end). Au moment de la
-          réservation, vous me transmettez vos éléments d’identité : **noms,
-          prénoms, date de naissance** tels qu’ils figurent sur votre état
-          civil.
+          réservation, vous me transmettez vos éléments d’identité :{" "}
+          <span className="bold">noms, prénoms, date de naissance</span> tels
+          qu’ils figurent sur votre état civil.
         </>
       ),
       icon: "🗓️",
@@ -32,11 +32,11 @@ export default function Process() {
       details: (
         <>
           Sur la base des informations transmises, je prépare en amont de la
-          consultation l’intégralité de votre thème en **Numérologie
-          Stratégique®**. Cette analyse minutieuse de votre profil, qui
-          nécessite plusieurs heures de travail préparatoire, m'offre une
-          lecture précise, approfondie et personnalisée de votre personnalité et
-          temporalité.
+          consultation l’intégralité de votre thème en{" "}
+          <span className="bold">Numérologie Stratégique®</span>. Cette analyse
+          minutieuse de votre profil, qui nécessite plusieurs heures de travail
+          préparatoire, m'offre une lecture précise, approfondie et
+          personnalisée de votre personnalité et temporalité.
         </>
       ),
       icon: "🧠",
@@ -46,7 +46,8 @@ export default function Process() {
       details: (
         <>
           Pour vous offrir plus de flexibilité et de confort, la restitution du
-          thème se déroule à distance (**via Google Meet ou WhatsApp**).
+          thème se déroule à distance (
+          <span className="bold">via Google Meet ou WhatsApp</span>).
           <p className="visio-requirements">
             Afin de garantir le bon déroulement, il est indispensable de
             disposer d’un appareil (ordinateur, tablette ou smartphone) muni
@@ -62,9 +63,9 @@ export default function Process() {
       title: "Restitution Détaillée",
       details: (
         <>
-          La consultation dure entre **1h30 et 2h15** selon le thème choisi.
-          Nous explorons votre thème en profondeur, avec des explications
-          claires et personnalisées.
+          La consultation dure entre <span className="bold">1h30 et 2h15</span>{" "}
+          selon le thème choisi. Nous explorons votre thème en profondeur, avec
+          des explications claires et personnalisées.
         </>
       ),
       icon: "💬",

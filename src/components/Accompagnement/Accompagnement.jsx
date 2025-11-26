@@ -89,7 +89,7 @@ export default function AccompagnementSection() {
       calendlyLink: "https://calendly.com/votre-nom/theme-enfant-ado",
       specialNote: (
         <>
-          **Modalités particulières :**
+          <span className="bold">Modalités particulières :</span>
           <ul>
             <li>
               - Pour les mineurs, la restitution du thème se fait uniquement

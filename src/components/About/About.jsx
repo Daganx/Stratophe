@@ -28,12 +28,14 @@ export default function About() {
         {/* 2. Bloc Texte de Présentation */}
         <div className="about-text-block">
           <p>
-            Je m’appelle **Ophélie** – un prénom qui vient du grec *Ophelia*,
-            signifiant « aide » ou « secours ». Peut-être est-ce là au fond, que
-            se cache mon goût pour l’accompagnement ? Mon prénom résonne avec la
-            vibration **7**, symbole d’intuition, de sensibilité et de réflexion
-            profonde. Tout au long de mon parcours, cette énergie m’a guidée
-            vers l’observation et la compréhension de l’humain.
+            Je m’appelle <span className="bold">Ophélie</span> – un prénom qui
+            vient du grec <span className="italic">Ophelia</span>, signifiant «
+            aide » ou « secours ». Peut-être est-ce là au fond, que se cache mon
+            goût pour l’accompagnement ? Mon prénom résonne avec la vibration
+            <span className="bold"> 7</span>, symbole d’intuition, de
+            sensibilité et de réflexion profonde. Tout au long de mon parcours,
+            cette énergie m’a guidée vers l’observation et la compréhension de
+            l’humain.
           </p>
 
           <p>
@@ -48,15 +50,20 @@ export default function About() {
             Les nombres, quant à eux, m’ont toujours parlé. Sensible aux
             énergies et aux messages subtils qu’ils portent, j’ai choisi la
             Numérologie comme second métier, un moyen d’unir mon goût pour
-            l’analyse, l’écoute et l’accompagnement, avec un outil **concret,
-            structuré, puissant et éclairant.**
+            l’analyse, l’écoute et l’accompagnement, avec un outil{" "}
+            <span className="bold">
+              concret, structuré, puissant et éclairant
+            </span>
+            .
           </p>
 
           <p className="cta-paragraph">
-            **Formée et certifiée en Numérologie Stratégique®**, je mets
-            aujourd’hui ma sensibilité, mon sens de l’analyse et mes compétences
-            au service de celles et ceux qui cherchent un éclairage, un déclic
-            ou une meilleure compréhension d’eux-mêmes.
+            <span className="bold">
+              Formée et certifiée en Numérologie Stratégique®
+            </span>
+            , je mets aujourd’hui ma sensibilité, mon sens de l’analyse et mes
+            compétences au service de celles et ceux qui cherchent un éclairage,
+            un déclic ou une meilleure compréhension d’eux-mêmes.
           </p>
 
           <p className="final-cta">

@@ -54,7 +54,7 @@
 .banner-text h3 {
   font-size: clamp(0.8rem, 3vw, 1.5rem);
   font-weight: 400;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .banner-text a {
